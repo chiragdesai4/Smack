@@ -1,5 +1,6 @@
 package com.chirag.smack
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -36,7 +37,10 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    fun loginBtnNavClicked(view: View) {}
+    fun loginBtnNavClicked(view: View) {
+        startActivity(Intent(this, LoginActivity::class.java))
+    }
+
     fun addChannelClicked(view: View) {}
     fun sendMessageBtnClicked(view: View) {}
 }
