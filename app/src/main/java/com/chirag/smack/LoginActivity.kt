@@ -1,8 +1,9 @@
 package com.chirag.smack
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,6 +11,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
     }
 
-    fun loginCreateUserBtnClicked(view: View) {}
+    fun loginCreateUserBtnClicked(view: View) {
+        startActivity(Intent(this, CreateUserActivity::class.java))
+    }
+
     fun loginLoginBtnClicked(view: View) {}
 }
