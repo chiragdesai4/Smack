@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.chirag.smack.R
+import com.chirag.smack.services.AuthService
 import kotlinx.android.synthetic.main.activity_create_user.*
 import java.util.*
 
@@ -45,5 +46,11 @@ class CreateUserActivity : AppCompatActivity() {
         println(avatarColor)
     }
 
-    fun createUserClicked(view: View) {}
+    fun createUserClicked(view: View) {
+        AuthService.registerUser(this, "b@b.com", "123456") { complete ->
+            if (complete) {
+
+            }
+        }
+    }
 }
